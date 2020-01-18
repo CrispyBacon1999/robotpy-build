@@ -40,12 +40,14 @@ A wrapper section might look like this:
     name = "myproject"
     sources = ["myproject/src/myproject.cpp"]
 
+Note that the name supplied here is what other packages will refer to in the `libs` field.
+
 If wrapping a downloaded library, run `python setup.py build_dl` to
 download your library. You can also wrap sources in your own wrapper.
 
-`python -m robotpy_build scan_headers` will scan all of your defined
+`python -m robotpy_build scan-headers` will scan all of your defined
 includes directories (including those of downloaded artifacts) and
-output something you can paste into the `generate` key. Edit those.
+output something you can paste under your wrapper section that you defined before. Edit those.
 
 `python -m robotpy_build create-gen` will scan your defined generate
 items and output yaml for them in the directory defined by `generation_data`.
